@@ -6,7 +6,7 @@ const fs = require('fs');
 const app = express();
 
 app.get('/download', (req, res) => {
-  const filePath = 'C:\\xampp.exe'; // Replace with the actual file path
+  const filePath = 'xampp.exe'; // Replace with the actual file path
 
   const file = path.resolve(filePath);
   const filename = path.basename(file);
@@ -14,7 +14,8 @@ app.get('/download', (req, res) => {
   const ranges = rangeParser(fs.statSync(file).size, req.headers.range || '');
 
   if (!ranges) {
-    res.status(416).send('Range Not Satisfiable');
+    console.log("LLLLLLL")
+    res.status(416).send('Range Not Satisfiable'); 
     return;
   }
 
