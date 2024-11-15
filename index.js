@@ -5,8 +5,8 @@ const fs = require('fs');
 
 const app = express();
 
-app.get('/download_mysql', (req, res) => {
-  const filePath = 'mysql.zip'; // Replace with the actual file path
+app.get('/download_xampp', (req, res) => {
+  const filePath = 'xampp.zip'; // Replace with the actual file path
 
   const file = path.resolve(filePath);
   const filename = path.basename(file);
